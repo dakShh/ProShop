@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import products from "../products";
+import products from "../Config/json/products";
 import Product from "../components/Product";
 const HomeScreen = () => {
   return (

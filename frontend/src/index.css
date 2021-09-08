@@ -1,10 +1,12 @@
 main {
   min-height: 80vh;
-  background-image: url("./Assets/black-felt.png");
+  /* background-image: url("./Assets/black-felt.png");
   background-repeat: repeat;
   background-attachment: fixed;
-  background-color: #c5dfda;
+  background-color: #c5dfda; */
   /* background-size: cover; */
+  background: #45ffb940;
+  /* background: linear-gradient(180deg, rgba(212, 255, 236, 1) 0%, rgba(120, 190, 174, 1) 100%); */
 }
 .cust-nav {
   background-color: #44566b !important;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Rating from "@material-ui/lab/Rating";
 
-export default function SimpleRating({ value, text }) {
+export default function SimpleRating({ value, text, className }) {
   const [rating, setRating] = useState(value);
 
   return (
@@ -9,8 +9,7 @@ export default function SimpleRating({ value, text }) {
       <div
         component="fieldset"
         mb={3}
-        borderColor="transparent"
-        className="d-flex align-items-center"
+        className={`d-flex align-items-center ${className ? className : null}`}
       >
         <Rating
           name="simple-controlled"
