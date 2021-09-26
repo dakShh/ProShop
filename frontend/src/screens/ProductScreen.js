@@ -1,10 +1,20 @@
-import React from "react";
-import products from "../Config/json/products";
+import React, { useState, useEffect } from "react";
+// import products from "../Config/json/products";
 import { Link } from "react-router-dom";
 import { Row, Col, Image, Card } from "react-bootstrap";
 import SimpleRating from "../components/Rating";
+import axios from "axios";
 const ProductScreen = ({ match }) => {
-  const product = products.find((p) => p._id === match.params.id);
+  // const product = products.find((p) => p._id === match.params.id);
+  const [product, setProduct] = useState({});
+  useEffect(() => {
+    const fetchData = async () => {
+      await axios.get(`/products/${match.params.id}`).then((res) => setProduct(res.data));
+    };
+    fetchData();
+    // console.log("match", match.params.id);
+  }, [match.params.id]);
+
   return (
     <>
       <Link to="/">
