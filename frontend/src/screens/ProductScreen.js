@@ -9,7 +9,10 @@ const ProductScreen = ({ match }) => {
   const [product, setProduct] = useState({});
   useEffect(() => {
     const fetchData = async () => {
-      await axios.get(`/products/${match.params.id}`).then((res) => setProduct(res.data));
+      await axios
+        .get(`/products/${match.params.id}`)
+        .then((res) => setProduct(res.data))
+        .catch((err) => console.log("error", err));
     };
     fetchData();
     // console.log("match", match.params.id);
